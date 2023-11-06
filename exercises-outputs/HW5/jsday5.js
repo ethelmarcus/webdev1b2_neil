@@ -54,31 +54,38 @@ function submitContact() {
 
 
 // Function to view saved contact info(s)
-function viewContacts() {
-    // console.log(phoneBook);
+function viewContacts() {    
+    var contactTable = document.getElementById("contactTable");
+    var contactList = document.getElementById('contactList');
+    contactList.innerHTML = '';
+
+     // Remove all table rows except the header row
+    while (contactTable.rows.length > 1) {
+        contactTable.deleteRow(1);
+    }
 
     // Check if there are saved contact info
     if (phoneBook.length == 0) {
         // If empty display alert message
         alert('There are no saved contacts');
 
-    } else {
-        // Else create display contact info from phoneBook array
-        var contactTable = document.getElementById("contactTable");
-        var contactList = document.getElementById('contactList');
-        contactList.innerHTML = '';
+    } else { // Else display contact info from phoneBook array
         
         /* Using a for loop to create new rows and cells to display
            contactName and contactNumber
         */
         for (var i = 0; i < phoneBook.length; i++) {
             var contact = phoneBook[i];
-            var row = contactTable.insertRow(1);
+            var row = contactTable.insertRow(-1);
+
             var nameCell = row.insertCell(0);
-            var numberCell = row.insertCell(1);
-        
+            nameCell.className = 'border py-2 px-3 w-1/2';
             nameCell.textContent = contact.contactName;
+
+            var numberCell = row.insertCell(1);
+            numberCell.className = 'border py-2 px-3 w-1/2';
             numberCell.textContent = contact.contactNumber;
+            console.log(phoneBook[i]);
         };
     }; 
 };
