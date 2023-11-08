@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework 5 JS</title>
+    <link rel="stylesheet" href="jsday5.css">
+  </head>
+  <body class="m-0 p-0 flex flex-col justify-center items-center bg-slate-800">
+    <div class="container font-sans flex flex-col m-5 p-10 w-1/2 bg-white rounded-lg">
+      <div class="navbar flex justify-center">
+        <img src="the-coding-school.png" class="rounded-lg w-[80px] h-[80px]">
+      </div>
+
+      <p class="flex justify-center text-center text-2xl font-bold pt-5 pb-10">
+        The Coding School <br />
+        Phone Book
+      </p>
+
+      <div class="contactForm bg-gray-100 py-5 flex flex-col justify-center items-center text-left">
+        <div>
+          <!-- INPUT FIELD FOR CONTACT NAME AND PHONE NUMBER -->
+          <p class="font-medium pb-3">
+            Name
+          </p>
+          <input class="w-full py-2 px-3 mb-4 border border-gray-300 
+            rounded-md focus:outline-none focus:ring focus:border-blue-300" 
+            type="text" name="userName" id="userName" placeholder="Enter name here" />
+        </div>
+  
+        <div>
+          <p class="font-medium pb-3">
+            Phone Number
+          </p>
+          <input class="w-full py-2 px-3 mb-4 border border-gray-300 
+            rounded-md focus:outline-none focus:ring focus:border-blue-300" 
+            type="text" name="userNumber" id="userNumber" placeholder="+639" />
+        </div>
+  
+        <div>
+          <!-- BUTTONS FOR ADDING NEW CONTACT INFO AND VIEWING SAVED CONTACTS -->
+          <button class="text-white rounded-lg bg-green-500 m-1 p-2 w-16" 
+            onclick="submitContact()">Add</button>
+          <button class="text-white rounded-lg bg-gray-500 m-1 p-2" 
+            onclick="viewContacts()">View All</button>
+        </div>
+      </div>
+  
+      <div class="w-full mx-auto mt-4 flex flex-col">
+        <p class="text-lg font-bold flex justify-center">CONTACT LIST</p>
+        <table id="contactTable" class="w-3/4 border border-collapse mx-[13%]">
+          <thead>
+            <tr>
+              <th class="border py-2 px-3 w-1/2">Name</th>
+              <th class="border py-2 px-3 w-1/2">Phone Number</th>
+            </tr>
+          </thead>
+          <tbody id="contactList"></tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="jsday5.js"></script>
+</html>
