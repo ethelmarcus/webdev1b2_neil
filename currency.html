@@ -5,9 +5,76 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <title>Document</title>
       <script src="https://cdn.tailwindcss.com"></script>
-      <link rel="stylesheet" href="assets/css/currency.css">
+      <link rel="stylesheet" href="assets/css/currency.css" />
+      <title>Currency</title>
+      <script src="https://cdn.tailwindcss.com"></script>
+      <script>
+        tailwind.config = {
+          theme: {
+            colors: {
+              'backdrop-currency': '#eff5f8',
+              'date-color': '#6392a7',
+              'btn-color': '#6392a7',
+              'white': '#fff',
+              'circle-color': '#78a374',
+            },
+          }
+        }
+      </script>
   </head>
-  <body class="flex items-center justify-center h-screen">
-    
+  <body class="h-full bg-backdrop-currency flex items-center justify-center m-0">
+    <div class="white-box w-[496px] bg-white flex flex-col pt-4 px-4 rounded-2xl box-border">
+      <div class="flex flex-row justify-between items-center">
+        <button class="h-[40px] p-4 rounded text-white bg-btn-color flex items-center justify-center">Fetch Data</button>
+        <p class="text-date-color">10-13-2023</p>
+      </div>
+      <div class="pt-4 px-0 pb-0 flex flex-wrap">
+
+        <!--ROW 1-->
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">AUD</div>
+          <div>1.6584</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">BGN</div>
+          <div>1.9558</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">BRL</div>
+          <div>5.3604</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">CAD</div>
+          <div>1.4435</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-0 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">CHF</div>
+          <div>0.9566</div>
+        </div>
+
+        <!--ROW 2-->
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">CNY</div>
+          <div>7.7514</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">CZK</div>
+          <div>24.55</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">DKK</div>
+          <div>7.4562</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-4 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">EUR</div>
+          <div>1</div>
+        </div>
+        <div class="w-[80px] h-[80px] mb-4 mr-0 rounded-full bg-circle-color flex flex-col justify-center items-center text-white p-[16px] border-box">
+          <div class="font-bold text-[22px]">BGP</div>
+          <div>0.8626</div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
+  

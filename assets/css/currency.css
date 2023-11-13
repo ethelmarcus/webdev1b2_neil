@@ -1,18 +1,9 @@
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #eff5f8;
-    font-family: "Roboto", sans-serif
-}
-
-button {
-    background-color: #6392a7;
-}
-
-.date {
-    color: #6392a7;
-}
-
-.circles {
-    background-color: #78a374;
-}
+html {
+    height: 100%;
+  }
+  body {
+    font-family: "Roboto", sans-serif;
+  }
+  .white-box {
+    box-shadow: 0px 8px 16px rgba(138, 177, 194, 0.28);
+  }
