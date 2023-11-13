@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Calculator</title>
+      <link rel="stylesheet" href="assets/css/calc.css">
+  </head>
+  <body class="flex justify-center items-center content-center flex-wrap">
+    <div id="calcContainer">
+      <div id="calcContent" class="flex flex-col gap-2.5">
+        <div id="displayRow" class="text-white text-5xl flex justify-end my-5"></div>
+        
+        <div id="buttonsRow1" class="flex flex-column justify-between">
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="clearCalc()">
+            AC
+          </button>
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="positiveNegative()">
+            [+/-]
+          </button>
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="calculatePercentage()">%</button>
+
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="storeOperator('/')">
+            /
+          </button>
+        </div>
+        <div id="buttonsRow2" class="flex flex-column justify-between">
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(7)">
+            7
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(8)">
+            8
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(9)">
+            9
+          </button>
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="storeOperator('x')">
+            x
+          </button>
+        </div>
+        <div id="buttonsRow3" class="flex flex-column justify-between">
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(4)">
+            4
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(5)">
+            5
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(6)">
+            6
+          </button>
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="storeOperator('-')">
+            -
+          </button>
+        </div>
+        <div id="buttonsRow4" class="flex flex-column justify-between">
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(1)">
+            1
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(2)">
+            2
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex justify-center items-center" onclick="pressNumber(3)">
+            3
+          </button>
+          <button class="buttonItem text-2xl font-light text-gray-400 flex justify-center items-center" onclick="storeOperator('+')">
+            +
+          </button>
+        </div>
+        <div id="buttonsRow" class="flex flex-column justify-between">
+          <button class="buttonItem text-2xl font-light text-white flex basis-[155px] flex-initial justify-center items-center" onclick="pressNumber(0)">
+            0
+          </button>
+          <button class="buttonItem text-2xl font-bold text-white flex basis-[70px] shrink-0 justify-center items-center" onclick="pressDecimalPoint()">
+            .
+          </button>
+          <button data-equals class="buttonItem text-2xl font-light text-white flex basis-[70px] shrink-0 justify-center items-center" onclick="compute()">
+            =
+          </button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="assets/js/calc.js"></script>
+</html>
